@@ -1,0 +1,137 @@
+
+.owl-wrapper-outer {
+	border:none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.owl-carousel .owl-buttons div{
+	font-size: 20px;
+	opacity: .4;
+}
+.orderscreen-title {
+	padding: 20px;
+}
+.orderscreen-instructions {
+	padding-top: 10px;
+}
+.orderscreen-title span{
+	font-weight:bold;
+	font-size:18px;
+}
+.orderscreen-processbar li {
+	display: inline-block;
+	margin-right:50px;
+}
+.orderscreen-processbar li:last-child {
+	margin-right:0px;
+}
+.orderscreen-processstatus {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.orderscreen-processbar {
+	padding: 10px;
+}
+.orderscreen-slider li {
+	padding: 5px;
+	border: 1px solid grey;
+}
+.orderscreen-slider li:hover {
+	background-color:rgba(0,0,0,.5);
+}
+.orderscreen-slider ul{
+	padding:0;
+	margin:0;
+}
+.orderscreen-slider-1 li {
+	display: inline-block;
+	height: 180px;
+}
+.orderscreen-slider-2 li {
+	display: inline-block;
+	height: 120px;
+}
+.btn-primary {
+	margin-top: 10px;
+}
+
+/*-------------------------------------------------------- OWL CAROUSEL FIX ---------------------------*/
+
+.owl-dots {
+	text-align: center;
+	position: fixed;
+	bottom: 5px;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.owl-dot {
+	border-radius: 50px;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	background: rgba(127,127,127, 0.5);
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.owl-dot.active {
+	background: rgba(127,127,127, 1);
+}
+
+/*---------------------------------------- Progress bar --------------------------*/
+.orderscreen-processbar{
+	counter-reset: step;
+
+}
+.orderscreen-processbar li{
+	list-style-type: none;
+	float: left;
+	width: 25%;
+	position: relative;
+	text-align: center;
+	margin: 0;
+}
+
+.orderscreen-processbar li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 50px;
+	height: 50px;
+	line-height: 48px;
+	border: 3px solid #ddd;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50px;
+	background-color: #ddd;
+	float: right
+}
+
+.orderscreen-processbar li:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: green;
+	top: 24px;
+	left: 0%;
+	Z-index: -1;
+}
+
+.orderscreen-processbar li.active{
+	color: green;
+}
+
+.orderscreen-processbar li.active:before{
+	border-color: green;
+}
+
+.orderscreen-processbar li.active~li:after{
+	background-color: #ddd;
+}
